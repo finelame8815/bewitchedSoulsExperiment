@@ -61,7 +61,7 @@ public class PlayerMove : MonoBehaviour
 
         PlayerMove script = otherPlayer.GetComponent<PlayerMove>();
 
-        if ((angle < 50.0f && Input.GetKey(KeyCode.Z) && !Input.GetKey(KeyCode.S)) || (script && script.inAnchor))
+        if ((angle < 50.0f && Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S)) || (script && script.inAnchor))
             speed_modifier = 1f;
 
         Vector3 forwardMovement = transform.forward * vertInput * speed_modifier;
