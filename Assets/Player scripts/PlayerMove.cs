@@ -31,12 +31,9 @@ public class PlayerMove : MonoBehaviour
     private void Update()
     {
         Timer -= Time.deltaTime;
-    }
-
-    private void FixedUpdate()
-    {
         PlayerMovement();
     }
+
 
     public void setAnchor(GameObject anchor, bool isAnchor)
     {

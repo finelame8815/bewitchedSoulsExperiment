@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8764226458761478777}
   - component: {fileID: 3666755189477991118}
   - component: {fileID: 8878778219476576582}
-  - component: {fileID: 1609000022131208552}
   - component: {fileID: 1136855136822135134}
   - component: {fileID: 3904557169376407532}
   - component: {fileID: 4135081942921602464}
@@ -61,6 +60,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -85,20 +86,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &1609000022131208552
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1238814402583334967}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1136855136822135134
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -132,6 +120,7 @@ MonoBehaviour:
   gravity_speed: 15
   isGrounded: 1
   max_distance: 5
+  repulse_speed: 5
   Timer: 0
   targetTime: 1
   inAnchor: 0
@@ -179,7 +168,6 @@ GameObject:
   - component: {fileID: 4514019493016469034}
   - component: {fileID: 4312370953450647474}
   - component: {fileID: 5924045926864112160}
-  - component: {fileID: 5802392843817817809}
   - component: {fileID: 7949788150251262227}
   m_Layer: 11
   m_Name: Head
@@ -224,6 +212,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -248,19 +238,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &5802392843817817809
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5412977682194725411}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &7949788150251262227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,6 +411,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -457,6 +437,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &8764226459993109554
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -481,8 +462,8 @@ GameObject:
   - component: {fileID: 8764226460067332932}
   - component: {fileID: 8764226460067332928}
   - component: {fileID: 8764226460067332935}
-  - component: {fileID: 8764226460067332934}
   - component: {fileID: 8764226460067332933}
+  - component: {fileID: 7420079491869670467}
   m_Layer: 11
   m_Name: Anchor
   m_TagString: SpecterInteract
@@ -528,6 +509,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -552,19 +535,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &8764226460067332934
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8764226460067332987}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &8764226460067332933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,6 +550,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tp_point: {fileID: 8764226459993109552}
   isAnchor: 0
+  source: {fileID: 0}
+--- !u!136 &7420079491869670467
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8764226460067332987}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.59
+  m_Height: 2.4775648
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.8854956, z: 0}
 --- !u!1 &8764226460214936409
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,7 +575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8764226460214936410}
   - component: {fileID: 8764226460214936411}
-  m_Layer: 11
+  m_Layer: 2
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,8 +604,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8764226460214936409}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 0.98765564, g: 0, b: 1, a: 1}
   m_Intensity: 7.88
   m_Range: 4.2387004
@@ -668,5 +655,6 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0

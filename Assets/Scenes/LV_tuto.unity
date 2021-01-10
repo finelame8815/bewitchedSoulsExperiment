@@ -18155,7 +18155,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1068870646}
   - component: {fileID: 1068870647}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: Human Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
